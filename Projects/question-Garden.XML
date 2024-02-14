@@ -1,0 +1,159 @@
+<question> How can we create a progam where Turtle draws x flowers in y length of grass?
+<title>Garden</title>
+<type>JavaCode</type>
+<points>2</points>
+<text> Here we will draw grass by creating green, diagonal line at a 60 degree angle that criss cross over each other. From that grass (of which the length can be adjusted in the main method) we will see a changable number of stems coming up with petals. Our goal is to practice writing methods with parameters and using embedded for loops.
+</text>
+<figure>
+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
+
+
+</figure>
+<init>
+public class X {
+
+    // write your code here
+
+    public static void main(String[] args) {
+        // test your code here
+    }
+
+}
+</init>
+<answer>
+public class Garden {
+
+  public static void main (String[] args) {
+    Turtle Lee = new Turtle();
+    grass(Lee, 15, 50);
+    flower(Lee, 4, 15, 80, 50);
+
+
+  }
+
+  public static void grass(Turtle t, int numGrass, double length) {
+    t.penup();
+    t.backward(((length / 2) * numGrass) / 2); // This equation finds half the distance of "grass" section of the drawing
+    t.pendown(); //this three command sequence makes sure that the middle of the grass is centered in the turtle program for optimal visiblity of our garden
+    for (int i = 0; i < numGrass; i++) {
+      t.color("green");
+      t.left(60);
+      t.forward(length);
+      t.penup();
+      t.right(60);
+      t.backward(length / 2);
+      t.pendown();
+      t.right(60);
+      t.forward(length);
+      t.left(60);
+    }
+    t.penup();
+    t.backward((length / 2) * numGrass); // takes us back to the start of the grass
+    t.pendown();
+  }
+
+
+  public static void flower(Turtle t, int numStems, int numGrass, double height, double length) {
+    for (int i = 0; i < numStems; i++) {
+      t.penup();
+      t.forward((length * numGrass) / (2 * (numStems + 1))); // separates the stems equally in the grass
+      t.pendown();
+      t.color("green");
+      t.left(90);
+      t.forward(height);
+      t.right(180);
+      for (int k = 0; k < 3; k++) {
+        for (int j = 0; j < 6; j++) {
+          t.color("pink");
+          t.forward(20);
+          t.left(60);
+        }
+        t.right(120);
+      }
+      t.left(180);
+      t.penup();
+      t.backward(height);
+      t.right(90);
+      t.pendown();
+    }
+    t.penup();
+    t.backward(((length / 2) * numGrass) / 2 - (length * numGrass) / (2 * (numStems + 1))); // moves turtle back to the starting place
+    t.pendown();
+  }
+}
+
+</answer>
+</question>

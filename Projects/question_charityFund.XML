@@ -1,0 +1,51 @@
+<question>
+<title>charityFund</title>
+<type>JavaCode</type>
+<points>1</points>
+<text>You are in charge of writing a program for a charity fund. At a certain store, customers are allowed to round up their purchase price to a prodcut of 10 and an integer and donate the extra change to charity. Write a method money(double cost) that displays a message. This message state what the customer's original cost was, what the system rounded it up to, and how much of their final cost is being donated. Nothing in the store costs more than $49.99, so do not worry about making a case for any final cost that is greater than $50.
+</text>
+<figure>
+</figure>
+<init>
+public class X {
+
+    // write your code here
+
+    public static void main(String[] args) {
+        // test your code here
+    }
+
+}
+</init>
+<answer>
+public class charityFund {
+
+  public static void main(String[] args) {
+//    System.out.println(money(9.37)); // (TC1) we should expect donation = 10 and donation - cost = .63
+//    System.out.println(money(10.84)); // (TC2) we should expect donation = 20 and donation - cost = 9.16
+//    System.out.println(money(20.22)); // (TC3) we should expect donation = 30 and donation - cost = 9.78
+//    System.out.println(money(34.64)); // (TC4) we should expect donation = 40 and donation - cost = 5.36
+    System.out.println(money(48.15)); // (TC5) we should expect donation = 50 and donation - cost = 1.85
+
+  }
+
+  public static String money(double cost) {
+    double donation = 0.0;
+    if (cost < 10) {
+      donation = 10;
+    } else if (cost < 20) {
+      donation = 20;
+    } else if (cost < 30) {
+      donation = 30;
+    } else if (cost < 40) {
+      donation = 40;
+    } else if (cost < 50) {
+      donation = 50;
+    }
+    String string_donation = String.valueOf(donation);
+    String message = "Thank you for donating! Your total was " +"$"+ cost + ",but becomes " + "$" + string_donation + " with your donation. You donated " + "$" + (donation - cost);
+    return message;
+  }
+}
+</answer>
+</question>

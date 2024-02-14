@@ -1,0 +1,47 @@
+<question>
+<title>gameday</title>
+<type>JavaCode</type>
+<points>2</points>
+<text>Imagine you are designing a message response program for Emory's jumbo screen. You are in charge of crafting 4 messages in response to 4 possible inputs: "scoreus: " + (the home score), "scorethem: " + the away score, "lose", and "win". The first two should include a score update in the response.
+</text>
+<figure>
+</figure>
+<init>
+public class X {
+
+    // write your code here
+
+    public static void main(String[] args) {
+        // test your code here
+    }
+
+}
+</init>
+<answer>
+public class gameday {
+
+  public static void main(String[] args) {
+    System.out.println(response("scoreus: 155")); // expect "GOOAAALLL! Home score: 55"
+    System.out.println(response("scorethem: 60")); // expect "DEFENSE --- DEFENSE --- DEFENSE! Away score: 60"
+    System.out.println(response("lose"));
+    System.out.println(response("win"));
+  }
+  // this method takes a given input and produces a custom response
+  public static String response(String status) {
+    String result = "";
+    if (status.substring(0, 3).equals("win")) { // the if statements in this code identify which phrase has been entered
+    result += "GOOO EAGLES!";
+    } else if (status.substring(0, 4).equals("lose")) {
+      result += "Good Game!";
+    } else if (status.substring(0, 7).equals("scoreus")) {
+      result += "GOOAAALLL! Home score: " + status.substring(9, (status.length())); // last substring adds the score
+    } else if (status.substring(0, 9).equals("scorethem")) {
+      result += "DEFENSE --- DEFENSE --- DEFENSE! Away score: " + status.substring(11, (status.length()));
+    } else {
+      result += "wrong input"; // contingency if an input is entered that isn't standard
+    }
+    return result;
+  }
+}
+</answer>
+</question>

@@ -1,0 +1,82 @@
+<question>
+<title>gradingSystem</title>
+<type>JavaCode</type>
+<points>1</points>
+<text> Write a program that gives a student their letter grade based on their grade percentage. Assume the class does not give grades higher than 100 and make sure to include +'s and -'s. Make sure t include error responses for if the student enters a percentage higher than 100 or lower than 0.
+</text>
+<figure>
+</figure>
+<init>
+public class X {
+
+    // write your code here
+
+    public static void main(String[] args) {
+        // test your code here
+    }
+
+}
+</init>
+<answer>
+public class gradingSystem {
+
+  public static void main(String[] args) {
+    System.out.println("If I have a 150%, then my grade is a(n) " + grade(150)); // expect an ERROR
+    System.out.println("If I have a 99%, then my grade is a(n) " + grade(99)); // expect an A+
+    System.out.println("If I have a 95%, then my grade is a(n) " + grade(95)); // expect an A
+    System.out.println("If I have a 90%, then my grade is a(n) " + grade(90)); // expect an A-
+    System.out.println("If I have a 88%, then my grade is a(n) " + grade(88)); // expect an B+
+    System.out.println("If I have a 85%, then my grade is a(n) " + grade(85)); // expect an B
+    System.out.println("If I have a 81%, then my grade is a(n) " + grade(81)); // expect an B-
+    System.out.println("If I have a 79%, then my grade is a(n) " + grade(79)); // expect an C+
+    System.out.println("If I have a 74%, then my grade is a(n) " + grade(74)); // expect an C
+    System.out.println("If I have a 72%, then my grade is a(n) " + grade(72)); // expect an C-
+    System.out.println("If I have a 69%, then my grade is a(n) " + grade(69)); // expect an D+
+    System.out.println("If I have a 65%, then my grade is a(n) " + grade(65)); // expect an D
+    System.out.println("If I have a 60%, then my grade is a(n) " + grade(60)); // expect an D-
+    System.out.println("If I have a 45%, then my grade is a(n) " + grade(45)); // expect an F
+    System.out.println("If I have a -20%, then my grade is a(n) " + grade(-20)); // expect an ERROR
+
+
+
+  }
+
+  public static String grade(int percent) {
+    String result;
+    if (percent > 100) {
+      result = "*ERROR* that's not a proper percentage *ERROR*";
+    } else if (percent >= 98) {
+      result = "A+";
+    } else if (percent >= 93) {
+      result = "A";
+    } else if (percent >= 90) {
+      result = "A-";
+    } else if (percent >= 88) {
+      result = "B+";
+    } else if (percent >= 83) {
+      result = "B";
+    } else if (percent >= 80) {
+      result = "B-";
+    } else if (percent >= 78) {
+      result = "C+";
+    } else if (percent >= 73) {
+      result = "C";
+    } else if (percent >= 70) {
+      result = "C-";
+    } else if (percent >= 68) {
+      result = "D+";
+    } else if (percent >= 63) {
+      result = "D";
+    } else if (percent >= 60) {
+      result = "D-";
+    } else if (percent >= 0) {
+      result = "F";
+    } else {
+      result = "*ERROR* a negative is not a proper percentage *ERROR*";
+    }
+    return result;
+  }
+}
+
+</answer>
+</question>

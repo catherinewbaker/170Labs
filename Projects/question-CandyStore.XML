@@ -1,0 +1,51 @@
+<question>
+<title>CandyStore</title>
+<type>JavaCode</type>
+<points>1</points>
+<text>You are helping the owner of a candy store figure out how many candies he has left after the people in his store order. He starts out with 100 of each of the following candies: gumdrops, candycorn, lollipops, and snickers. Create an array the displays the number of candies left after each purchase (test cases).
+</text>
+<figure>
+</figure>
+<init>
+public class X {
+
+    // write your code here
+
+    public static void main(String[] args) {
+        // test your code here
+    }
+
+}
+</init>
+<answer>
+public class CandyStore {
+
+  public static void main(String[] args) {
+    System.out.println(candies(25, 50, 100, 70));
+  }
+
+  public static String candies(int Gumdrops, int Candycorn, int Lollipops, int Snickers) {
+    int gumdrops = 100;
+    int candycorn = 100;
+    int lollipops = 100;
+    int snickers = 100;
+
+    int[] a = new int[4];
+    a[0] = gumdrops - Gumdrops;
+    a[1] = candycorn - Candycorn;
+    a[2] = lollipops - Lollipops;
+    a[3] = snickers - Snickers;
+
+    String result = "[";
+    for (int i = 0; i < a.length - 1; i++) {
+      result += a[i] + ", ";
+    }
+    if (a.length > 0) {
+      result += a[a.length - 1]; // last element
+    }
+    result += "]";
+    return result;
+  }
+}
+</answer>
+</question>

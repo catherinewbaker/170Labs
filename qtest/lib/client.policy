@@ -1,0 +1,20 @@
+grant codeBase "file:lib/qtest.jar" {
+    permission java.security.AllPermission;
+};
+
+grant codeBase "file:lib/rsyntaxtextarea-2.6.1.jar" {
+    permission java.security.AllPermission;
+};
+
+grant codeBase "file:lib/xchart-3.5.1-SNAPSHOT.jar" {
+    permission java.security.AllPermission;
+};
+
+grant codeBase "file:lib/webcam-capture-0.3.12.jar" {
+    permission java.security.AllPermission;
+};
+
+grant codeBase "file:lib/bridj-0.7.0.jar" {
+    permission java.security.AllPermission;
+};
+
